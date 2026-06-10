@@ -69,13 +69,19 @@ $unreadMessages  = $unreadMessages  ?? 0;
         </div>
     </div>
 
-    <div class="admin-links">
-        <a href="/bus-booking/public/index.php?page=admin-users"
-           class="btn-primary">Manage Users</a>
-        <a href="/bus-booking/public/index.php?page=admin-routes"
-           class="btn-secondary">Manage Routes</a>
-        <a href="/bus-booking/public/index.php?page=admin-messages"
-           class="btn-secondary">View Messages</a>
-    </div>
+    <div style="display:flex; gap:16px; margin-top:32px; justify-content:center; flex-wrap:wrap;">
+    <a href="/bus-booking/public/index.php?page=admin-users"
+       class="btn-primary" style="padding:14px 32px; font-size:15px;">
+        👥 Manage Users
+    </a>
+    <a href="/bus-booking/public/index.php?page=admin-routes"
+       class="btn-secondary" style="padding:14px 32px; font-size:15px;">
+        🚌 Manage Routes
+    </a>
+    <a href="/bus-booking/public/index.php?page=admin-messages"
+       class="btn-secondary" style="padding:14px 32px; font-size:15px;">
+        📬 View Messages
+    </a>
+</div>
 
 </div>

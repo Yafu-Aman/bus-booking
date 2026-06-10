@@ -107,14 +107,14 @@ $stats         = $stats         ?? ['total_trips' => 0, 'total_spent' => 0];
     <?php endif; ?>
 
     <!-- Search button -->
-    <div class="dashboard-actions">
+    <div style="display:flex; justify-content:flex-end; align-items:center; margin-bottom:8px; margin-top:0;">
         <a href="/bus-booking/public/index.php?page=search" class="btn-primary">
             Search Bus Routes
         </a>
     </div>
 
     <!-- Booking History -->
-    <h3>My Bookings</h3>
+    <h3 style="margin-bottom:16px; margin-top:8px;">My Bookings</h3>
 
     <?php if (count($bookings) === 0): ?>
         <p class="no-bookings">You have no bookings yet.</p>

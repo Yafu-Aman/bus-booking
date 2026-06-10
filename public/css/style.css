@@ -66,11 +66,14 @@ body {
 
 /* ── Hero (landing page) ── */
 .hero {
+  min-height: 88vh;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 70vh;
-  text-align: center;
+  justify-content: center;
 }
 
 .hero-content h1 {
@@ -1067,4 +1070,193 @@ body {
 
 .contact-form-box select:focus {
   border-color: #1a73e8;
+}
+
+/* ── Hero with background image ── */
+.hero {
+  min-height: 88vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 32px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.hero-buttons .btn-primary {
+  background: #1a73e8;
+  color: white;
+  padding: 14px 36px;
+  font-size: 17px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero-buttons .btn-secondary {
+  background: transparent;
+  color: white;
+  padding: 14px 36px;
+  font-size: 17px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid white;
+}
+
+.hero-buttons .btn-secondary:hover {
+  background: white;
+  color: #1a73e8;
+}
+
+/* ── Features section ── */
+.features-section {
+  padding: 60px 40px;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+.features-section h2 {
+  font-size: 32px;
+  color: #1a73e8;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.features-grid {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 32px 24px;
+  flex: 1;
+  min-width: 200px;
+  max-width: 220px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+}
+
+.feature-icon {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ── Image banner section ── */
+.image-banner {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.image-banner img {
+  width: 55%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.image-banner-text {
+  flex: 1;
+  padding: 48px;
+  background: #1a73e8;
+  color: white;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image-banner-text h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.image-banner-text p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.image-banner-text .btn-primary {
+  background: white;
+  color: #1a73e8;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  width: fit-content;
+}
+
+.image-banner-text .btn-primary:hover {
+  background: #f0f0f0;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bus Booking System</title>
+    <title>Adey Bus Booking</title>
     <link rel="stylesheet" href="/bus-booking/public/css/style.css">
     <script src="/bus-booking/public/js/main.js"></script>
 </head>
@@ -11,7 +11,7 @@
 
 <nav class="navbar">
     <div class="nav-brand">
-        <a href="/bus-booking/public/index.php?page=home">🚌 BusBook</a>
+        <a href="/bus-booking/public/index.php?page=home"> Adey Bus Booking</a>
     </div>
 
     <div class="nav-links">

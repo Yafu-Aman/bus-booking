@@ -86,7 +86,7 @@ $success = $success ?? '';
                 <div class="contact-icon">📞</div>
                 <div>
                     <strong>Phone</strong>
-                    <p>+251 911 123 456</p>
+                    <p>+251 911 000 000</p>
                 </div>
             </div>
 
@@ -94,7 +94,7 @@ $success = $success ?? '';
                 <div class="contact-icon">📧</div>
                 <div>
                     <strong>Email</strong>
-                    <p>support@busbook.et</p>
+                    <p>support@adeybusbooking.et</p>
                 </div>
             </div>
 
