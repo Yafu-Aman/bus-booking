@@ -11,7 +11,7 @@
 
 <nav class="navbar">
     <div class="nav-brand">
-        <a href="/bus-booking/public/index.php?page=home"> Adey Bus Booking</a>
+        <a href="/bus-booking/public/index.php?page=home">Adey Bus Booking</a>
     </div>
 
     <div class="nav-links">
@@ -22,17 +22,18 @@
             <?php if ($_SESSION['role'] === 'passenger'): ?>
                 <a href="/bus-booking/public/index.php?page=dashboard">My Bookings</a>
                 <a href="/bus-booking/public/index.php?page=search">Search Routes</a>
+                <a href="/bus-booking/public/index.php?page=contact">Contact</a>
             <?php endif; ?>
 
             <?php if ($_SESSION['role'] === 'operator'): ?>
                 <a href="/bus-booking/public/index.php?page=operator">Operator Panel</a>
+                <a href="/bus-booking/public/index.php?page=contact">Contact</a>
             <?php endif; ?>
 
             <?php if ($_SESSION['role'] === 'admin'): ?>
                 <a href="/bus-booking/public/index.php?page=admin">Admin Panel</a>
             <?php endif; ?>
 
-            <a href="/bus-booking/public/index.php?page=contact">Contact</a>
             <a href="/bus-booking/public/index.php?page=logout" class="btn-logout">Logout</a>
 
         <?php else: ?>
