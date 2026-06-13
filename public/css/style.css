@@ -1260,3 +1260,65 @@ body {
 .image-banner-text .btn-primary:hover {
   background: #f0f0f0;
 }
+
+/* ── Admin messages ── */
+.message-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  border-left: 4px solid #ddd;
+}
+
+.message-unread {
+  border-left-color: #f57c00;
+  background: #fffdf7;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.message-meta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.message-name {
+  font-weight: 700;
+  color: #222;
+  font-size: 15px;
+}
+
+.message-email {
+  color: #1a73e8;
+  font-size: 14px;
+}
+
+.message-date {
+  color: #888;
+  font-size: 13px;
+}
+
+.message-subject {
+  font-size: 15px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.message-body {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-break: break-word;
+}

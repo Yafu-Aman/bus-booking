@@ -17,7 +17,7 @@ $router->post('login',    'AuthController', 'login');
 $router->post('register', 'AuthController', 'register');
 $router->get('contact',  'ContactController', 'showContact');
 $router->post('contact', 'ContactController', 'handleContact');
-$router->get('admin-messages', 'AdminController', 'manageMessages');
+
 
 // Passenger routes
 $router->get('search',          'RouteController',  'showSearch');
@@ -45,5 +45,6 @@ $router->get('admin-reject-route',  'AdminController', 'rejectRoute');
 $router->get('admin-delete-route',  'AdminController', 'deleteRoute');
 $router->get('admin-add-operator',  'AdminController', 'showAddOperator');
 $router->post('admin-add-operator', 'AdminController', 'handleAddOperator');
+$router->get('admin-messages', 'AdminController', 'manageMessages');
 
 $router->dispatch();
