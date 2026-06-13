@@ -111,16 +111,30 @@ class AdminController extends Controller {
     }
 
     public function deleteRoute() {
-        $this->requireRole('admin');
-        $routeId = isset($_GET['route_id']) ? (int)$_GET['route_id'] : 0;
-        if ($routeId > 0) {
-            $db   = Database::getInstance()->getConnection();
-            $stmt = $db->prepare("DELETE FROM routes WHERE id = ?");
-            $stmt->bind_param('i', $routeId);
-            $stmt->execute();
-        }
-        $this->redirect('/bus-booking/public/index.php?page=admin-routes');
+    $this->requireRole('admin');
+    $routeId = isset($_GET['route_id']) ? (int)$_GET['route_id'] : 0;
+
+    if ($routeId > 0) {
+        $db = Database::getInstance()->getConnection();
+
+        // First delete all bookings linked to this route
+        $stmt = $db->prepare("DELETE FROM bookings WHERE route_id = ?");
+        $stmt->bind_param('i', $routeId);
+        $stmt->execute();
+
+        // Also delete pending bookings linked to this route
+        $stmt = $db->prepare("DELETE FROM pending_bookings WHERE route_id = ?");
+        $stmt->bind_param('i', $routeId);
+        $stmt->execute();
+
+        // Now safe to delete the route
+        $stmt = $db->prepare("DELETE FROM routes WHERE id = ?");
+        $stmt->bind_param('i', $routeId);
+        $stmt->execute();
     }
+
+    $this->redirect('/bus-booking/public/index.php?page=admin-routes');
+}
 
     public function showAddOperator() {
         $this->requireRole('admin');
